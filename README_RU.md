@@ -3,7 +3,7 @@
 # Что это за проект?
 Kubek — это панель управления веб-сервером Minecraft, поддерживающая Linux и Windows. Проект предлагает интуитивно понятный интерфейс для управления серверами, плагинами и модами и многим другим. Включает встроенный FTP-сервер и файловый менеджер с подсветкой синтаксиса. Пользователи могут контролировать доступ к серверам через систему пользователей и ролей.
 
-[![Статус CI/CD](https://github.com/Seeroy/kubek-minecraft-dashboard/actions/workflows/build.yml/badge.svg)](https://github.com/Seeroy/kubek-minecraft-dashboard/actions/workflows/build.yml)
+[![Статус CI/CD](https://github.com/apofeoziy/dashmine/actions/workflows/build.yml/badge.svg)](https://github.com/apofeoziy/dashmine/actions/workflows/build.yml)
 
 **Функции:**
 - **Поддержка Linux/Windows**
@@ -27,15 +27,15 @@ Kubek — это панель управления веб-сервером Minec
 
 ## Скачать готовый релиз (рекомендуется)
 
-Скачайте и запустите подходящий под вашу ОС файл [из последнего релиза](https://github.com/Seeroy/kubek-minecraft-dashboard/releases/latest)
+Скачайте и запустите подходящий под вашу ОС файл [из последнего релиза](https://github.com/apofeoziy/dashmine/releases/latest)
 
 ## Собрать из исходников
 
 Клонируйте репозиторий и установите библиотеки
 **Node.js >= 20 required!**
 ```
-git clone https://github.com/Seeroy/kubek-minecraft-dashboard.git
-cd kubek-minecraft-dashboard
+git clone https://github.com/apofeoziy/dashmine.git
+cd dashmine
 npm install
 ```
 
@@ -58,7 +58,7 @@ docker run -d --name kubek \
 			-v /YOUR_DIRECTORY/logs:/usr/kubek/logs \
 			-v /YOUR_DIRECTORY/binaries:/usr/kubek/binaries \
 			-v /YOUR_DIRECTORY/config.json:/usr/kubek/config.json \
-			seeroy/kubek-minecraft-dashboard
+			apofeoziy/dashmine
 ```
 
 Если вы хотите открыть все порты, то используйте команду ниже (с ней панель всегда будет работать на порту 3000, переназначение портов недоступно)
@@ -69,5 +69,5 @@ docker run -d --name kubek --network host \
 			-v /YOUR_DIRECTORY/logs:/usr/kubek/logs \
 			-v /YOUR_DIRECTORY/binaries:/usr/kubek/binaries \
 			-v /YOUR_DIRECTORY/config.json:/usr/kubek/config.json \
-			seeroy/kubek-minecraft-dashboard
+			apofeoziy/dashmine
 ```

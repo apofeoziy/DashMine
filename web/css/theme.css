@@ -1,12 +1,12 @@
 :root {
-  --bg-primary-300: #a4cafe;
-  --bg-primary-400: #76a9fa;
-  --bg-primary-500: #3f83f8;
+  --bg-primary-300: #bea4fe;
+  --bg-primary-400: #a476fa;
+  --bg-primary-500: #703ff8;
   --bg-primary-600: #1c64f2;
-  --bg-primary-700: #1a56db;
-  --bg-primary-800: #1e429f;
-  --bg-primary-900: #233876;
-  --bg-primary-1000: #192a3a;
+  --bg-primary-700: #4e1adb;
+  --bg-primary-800: #431e9f;
+  --bg-primary-900: #3d2376;
+  --bg-primary-1000: #1e193a;
   --bg-primary-1050: #15222e;
   --bg-primary-1100: #060b13;
   --bg-primary-anim: #233876;
@@ -15,10 +15,10 @@
   --bg-dark-accent: #222c3a;
   --bg-dark-accent-light: #2e3e53;
   --bg-dark-accent-lighter: #68798a;
-  --success: #32d583;
-  --error: #f04438;
-  --warning: #fdb022;
-  --info: #53b1fd;
+  --success: #2db09a;
+  --error: #f03863;
+  --warning: #fd8c22;
+  --info: #b3ddff;
   --text-color: white;
 }
 

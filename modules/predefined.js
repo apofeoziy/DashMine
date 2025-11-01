@@ -70,7 +70,7 @@ exports.MAX_SERVER_LOGS_LENGTH_MINUS = -800;
 exports.KUBEK_LOGO_ASCII = " /$$                 /$$                 /$$      \n| $$                | $$                | $$      \n| $$   /$$ /$$   /$$| $$$$$$$   /$$$$$$ | $$   /$$\n| $$  /$$/| $$  | $$| $$__  $$ /$$__  $$| $$  /$$/\n| $$$$$$/ | $$  | $$| $$   $$| $$$$$$$$| $$$$$$/ \n| $$_  $$ | $$  | $$| $$  | $$| $$_____/| $$_  $$ \n| $$   $$|  $$$$$$/| $$$$$$$/|  $$$$$$$| $$   $$\n|__/  __/ ______/ |_______/  _______/|__/  __/";
 
 // URL к API для проверки обновлений
-exports.UPDATES_URL_API = "https://api.github.com/repos/Seeroy/kubek-minecraft-dashboard/releases";
+exports.UPDATES_URL_API = "https://api.github.com/repos/apofeoziy/dashmine/releases";
 
 // URL к API для отправки статистики
 exports.STATS_SEND_URL = "https://statscol.seeeroy.ru/save_kubek?savedata=";

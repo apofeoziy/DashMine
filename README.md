@@ -3,7 +3,7 @@
 # What is this project?
 Kubek is a Minecraft web server control panel that supports Linux and Windows. The project offers an intuitive interface for managing servers, plugins and mods and more. Includes an integrated FTP server and file manager with syntax highlighting. Users can control access to servers through a user and role system
 
-[![CI/CD status](https://github.com/Seeroy/kubek-minecraft-dashboard/actions/workflows/build.yml/badge.svg)](https://github.com/Seeroy/kubek-minecraft-dashboard/actions/workflows/build.yml)
+[![CI/CD status](https://github.com/apofeoziy/dashmine/actions/workflows/build.yml/badge.svg)](https://github.com/apofeoziy/dashmine/actions/workflows/build.yml)
 
 **Features:**
 - **Linux and Windows supported**
@@ -27,15 +27,15 @@ Kubek is a Minecraft web server control panel that supports Linux and Windows. T
 
 ## Download prepared release (recommended)
 
-Download and run the file suitable for your OS [from latest release](https://github.com/Seeroy/kubek-minecraft-dashboard/releases/latest)
+Download and run the file suitable for your OS [from latest release](https://github.com/apofeoziy/dashmine/releases/latest)
 
 ## Build from sources
 
 Clone repository and install libs
 **Node.js >= 20 required!**
 ```
-git clone https://github.com/Seeroy/kubek-minecraft-dashboard.git
-cd kubek-minecraft-dashboard
+git clone https://github.com/apofeoziy/dashmine.git
+cd dashmine
 npm install
 ```
 
@@ -58,7 +58,7 @@ docker run -d --name kubek \
 			-v /YOUR_DIRECTORY/logs:/usr/kubek/logs \
 			-v /YOUR_DIRECTORY/binaries:/usr/kubek/binaries \
 			-v /YOUR_DIRECTORY/config.json:/usr/kubek/config.json \
-			seeroy/kubek-minecraft-dashboard
+			apofeoziy/dashmine
 ```
 
 If you want to open all ports, then use the command below (with it, Kubek will always work on port 3000, port remapping is not available)
@@ -69,5 +69,5 @@ docker run -d --name kubek --network host \
 			-v /YOUR_DIRECTORY/logs:/usr/kubek/logs \
 			-v /YOUR_DIRECTORY/binaries:/usr/kubek/binaries \
 			-v /YOUR_DIRECTORY/config.json:/usr/kubek/config.json \
-			seeroy/kubek-minecraft-dashboard
+			apofeoziy/dashmine
 ```

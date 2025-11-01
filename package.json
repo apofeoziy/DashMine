@@ -1,18 +1,18 @@
 {
-  "name": "kubek-minecraft-dashboard",
+  "name": "dashmine",
   "version": "3.0.8",
   "description": "",
   "main": "app.js",
-  "author": "Seeroy",
+  "author": "apofeoziy",
   "scripts": {
     "start": "node app.js",
     "build": "pkg --config pkgconfig.json app.js",
-    "dockerBuild": "docker build -t seeroy/kubek-minecraft-dashboard .",
-    "dockerPush": "docker push seeroy/kubek-minecraft-dashboard"
+    "dockerBuild": "docker build -t apofeoziy/dashmine .",
+    "dockerPush": "docker push apofeoziy/dashmine"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Seeroy/kubek-minecraft-dashboard"
+    "url": "git+https://github.com/apofeoziy/dashmine"
   },
   "dependencies": {
     "axios": "^0.27.2",
