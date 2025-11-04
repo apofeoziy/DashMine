@@ -3,7 +3,7 @@
 # What is this project?
 dashmine is a Minecraft web server fork from [kubek](https://kubek.seeeroy.ru/) control panel that supports Linux and Windows. The project offers an intuitive interface for managing servers, plugins and mods and more. Includes an integrated FTP server and file manager with syntax highlighting. Users can control access to servers through a user and role system
 
-[![CI/CD status](https://github.com/apofeoziy/dashmine/actions/workflows/build.yml/badge.svg)](https://github.com/apofeoziy/dashmine/actions/workflows/build.yml)
+[![Node.js Package](https://github.com/apofeoziy/DashMine/actions/workflows/npm-publish.yml/badge.svg?branch=main&event=fork)](https://github.com/apofeoziy/DashMine/actions/workflows/npm-publish.yml)
 
 **Features:**
 - **Linux and Windows supported**
