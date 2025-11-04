@@ -23,7 +23,10 @@ exports.getPaperCoreURL = (core, version, cb) => {
             }
             let downloadFileName = data2.downloads.application.name;
             let finishURL = firstStepURL + "/builds/" + lastBuildNumber + "/downloads/" + downloadFileName;
-            cb(finishURL);
+            cb({
+                url: finishURL,
+                filename: downloadFileName
+            });
         });
     });
 };

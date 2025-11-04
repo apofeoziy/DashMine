@@ -10,3 +10,6 @@ backups/
 dist/
 binaries/
 .idea/
+.next/
+neweb/.next
+neweb/node_modules

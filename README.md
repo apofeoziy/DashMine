@@ -1,7 +1,7 @@
 [Readme на русском](README_RU.md)
 
 # What is this project?
-dashmine is a Minecraft web server control panel that supports Linux and Windows. The project offers an intuitive interface for managing servers, plugins and mods and more. Includes an integrated FTP server and file manager with syntax highlighting. Users can control access to servers through a user and role system
+dashmine is a Minecraft web server fork from [kubek](https://kubek.seeeroy.ru/) control panel that supports Linux and Windows. The project offers an intuitive interface for managing servers, plugins and mods and more. Includes an integrated FTP server and file manager with syntax highlighting. Users can control access to servers through a user and role system
 
 [![CI/CD status](https://github.com/apofeoziy/dashmine/actions/workflows/build.yml/badge.svg)](https://github.com/apofeoziy/dashmine/actions/workflows/build.yml)
 
@@ -15,13 +15,12 @@ dashmine is a Minecraft web server control panel that supports Linux and Windows
 - **Users and Roles System:** Manage users and roles with access restrictions to servers
 
 **Natively supported cores:**
-- Official Vanilla Server
+- Vanilla
 - PaperMC
 - Spigot
-- Waterfall
 - Velocity
 - Purpur
-- Magma
+- Folia
 
 # Installation
 

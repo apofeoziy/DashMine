@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  dashmine:
+    build: .
+    container_name: dashmine
+    ports:
+      - "3000:3000"  # Backend API
+      - "3001:3001"  # Next.js Frontend
+    volumes:
+      - ./servers:/usr/kubek/servers
+      - ./logs:/usr/kubek/logs
+      - ./backups:/usr/kubek/backups
+      - ./config.json:/usr/kubek/config.json
+      - ./users.json:/usr/kubek/users.json
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production

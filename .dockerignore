@@ -1,17 +1,41 @@
+# Config files
 config.json
 users.json
 *.exe
 *.sh
 *.bat
 *old*
+
+# Runtime directories
 servers/
-node_modules/
 logs/
 backups/
+
+# Dependencies
+node_modules/
+neweb/node_modules/
+
+# Build artifacts
 dist/
 binaries/
+neweb/.next/
+.next/
+
+# Development files
 .idea/
+.vscode/
+.git/
 .gitignore
 .dockerignore
+*.log
+*.md
+README*.md
 SCHEDULER_GUIDE.md
+
+# Old web interface (replaced by neweb)
+web/
+
+# Test files
+*.test.js
+*.spec.js
 LICENSE

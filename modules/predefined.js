@@ -153,9 +153,9 @@ exports.SERVER_CORES = {
         versionsMethod: "paper",
         urlGetMethod: "paper"
     },
-    waterfall: {
-        name: "waterfall",
-        displayName: "Waterfall (Proxy)",
+    folia: {
+        name: "folia",
+        displayName: "Folia (Beta)",
         versionsMethod: "paper",
         urlGetMethod: "paper"
     },

@@ -32,16 +32,38 @@ exports.getCoreVersionURL = (core, version, cb) => {
         let coreItem = PREDEFINED.SERVER_CORES[core];
         switch (coreItem.urlGetMethod) {
             case "externalURL":
-                CORES_URL_GEN.getCoreByExternalURL(coreItem.versionsUrl, version, cb);
+                CORES_URL_GEN.getCoreByExternalURL(coreItem.versionsUrl, version, (url) => {
+                    if (url === false) {
+                        cb(false);
+                    } else {
+                        // For externalURL, we only have URL, so generate filename
+                        let filename = core + "-" + version + ".jar";
+                        cb({ url: url, filename: filename });
+                    }
+                });
                 break;
             case "paper":
                 CORES_URL_GEN.getPaperCoreURL(coreItem.name, version, cb);
                 break;
             case "purpur":
-                CORES_URL_GEN.getPurpurCoreURL(version, cb);
+                CORES_URL_GEN.getPurpurCoreURL(version, (url) => {
+                    if (url === false) {
+                        cb(false);
+                    } else {
+                        let filename = "purpur-" + version + ".jar";
+                        cb({ url: url, filename: filename });
+                    }
+                });
                 break;
             case "magma":
-                CORES_URL_GEN.getMagmaCoreURL(version, cb);
+                CORES_URL_GEN.getMagmaCoreURL(version, (url) => {
+                    if (url === false) {
+                        cb(false);
+                    } else {
+                        let filename = "magma-" + version + ".jar";
+                        cb({ url: url, filename: filename });
+                    }
+                });
                 break;
             default:
                 cb(false);

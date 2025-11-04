@@ -6,16 +6,23 @@
   "author": "apofeoziy",
   "scripts": {
     "start": "node app.js",
-    "build": "pkg --config pkgconfig.json app.js",
-    "dockerBuild": "docker build -t apofeoziy/dashmine .",
-    "dockerPush": "docker push apofeoziy/dashmine"
+    "dev": "node app.js",
+    "build": "cd neweb && npm run build",
+    "build:backend": "pkg --config pkgconfig.json app.js",
+    "install:all": "npm install && cd neweb && npm install",
+    "docker:build": "docker build -t apofeoziy/dashmine .",
+    "docker:push": "docker push apofeoziy/dashmine",
+    "docker:run": "docker run -d -p 3000:3000 -p 3001:3001 --name dashmine apofeoziy/dashmine",
+    "docker:stop": "docker stop dashmine",
+    "docker:remove": "docker rm dashmine",
+    "deploy": "npm run build && npm run docker:build && npm run docker:push"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apofeoziy/dashmine"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.13.1",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.7",
     "crypto-js": "^4.2.0",
@@ -25,7 +32,7 @@
     "ftpd": "^0.2.16",
     "iconv-lite": "^0.6.3",
     "is-in-subnet": "^4.0.1",
-    "jimp": "^0.22.12",
+    "jimp": "^1.6.0",
     "js-base64": "^3.7.7",
     "mime": "^3.0.0",
     "minecraft-server-properties": "^1.0.0",
@@ -33,7 +40,6 @@
     "node-machine-id": "^1.1.12",
     "node-mcstatus": "^1.2.1",
     "os-utils": "^0.0.14",
-    "swagger-autogen": "^2.23.7",
     "tree-kill": "^1.2.2"
   }
 }

@@ -67,7 +67,7 @@ async function prepareJavaForServer(javaVersion, cb) {
 // Функция для запуска создания сервера Java
 async function startJavaServerGeneration(serverName, core, coreVersion, startParameters, javaExecutablePath, serverPort, cb) {
     let coreDownloadURL = "";
-    let coreFileName = core + "-" + coreVersion + ".jar";
+    let coreFileName = "";
 
     // Создаём задачу на создание сервера
     let creationTaskID = TASK_MANAGER.addNewTask({
@@ -111,8 +111,15 @@ async function startJavaServerGeneration(serverName, core, coreVersion, startPar
         } else {
             // ЕСЛИ ЯДРО НУЖНО СКАЧИВАТЬ
             tasks[creationTaskID].currentStep = PREDEFINED.SERVER_CREATION_STEPS.SEARCHING_CORE;
-            CORES_MANAGER.getCoreVersionURL(core, coreVersion, (url) => {
-                coreDownloadURL = url;
+            CORES_MANAGER.getCoreVersionURL(core, coreVersion, (result) => {
+                if (result === false) {
+                    tasks[creationTaskID].currentStep = PREDEFINED.SERVER_CREATION_STEPS.FAILED;
+                    LOGGER.warning(MULTILANG.translateText(mainConfig.language, "{{console.coreDownloadFailed}}"));
+                    cb(false);
+                    return;
+                }
+                coreDownloadURL = result.url;
+                coreFileName = result.filename;
                 tasks[creationTaskID].currentStep = PREDEFINED.SERVER_CREATION_STEPS.CHECKING_JAVA;
                 // Скачиваем ядро для сервера
                 tasks[creationTaskID].currentStep = PREDEFINED.SERVER_CREATION_STEPS.DOWNLOADING_CORE;
